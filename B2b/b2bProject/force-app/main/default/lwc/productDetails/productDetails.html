@@ -1,0 +1,130 @@
+<!-- <template>
+    <div class="accordion">
+        Features
+        <div class="accordion-header" data-section="features" onclick={handleSectionClick}>
+            Features
+            <span>{toggleIcon}</span>
+        </div>
+        <template if:true={activeSection.features}>
+            <div class="accordion-content">
+                <template for:each={product.features} for:item="feature">
+                    <p key={feature}>• {feature}</p>
+                </template>
+            </div>
+        </template>
+
+        Applications
+        <div class="accordion-header" data-section="applications" onclick={handleSectionClick}>
+            Applications
+            <span>{toggleIcon}</span>
+        </div>
+        <template if:true={activeSection.applications}>
+            <div class="accordion-content">
+                <template for:each={product.applications} for:item="application">
+                    <p key={application}>• {application}</p>
+                </template>
+            </div>
+        </template>
+
+        Specifications
+        <div class="accordion-header" data-section="specifications" onclick={handleSectionClick}>
+            Specifications
+            <span>{toggleIcon}</span>
+        </div>
+        <template if:true={activeSection.specifications}>
+            <div class="accordion-content">
+                <template for:each={product.specifications} for:item="spec">
+                    <p key={spec}>• {spec}</p>
+                </template>
+            </div>
+        </template>
+
+        Alternative Identifiers
+        <div class="accordion-header" data-section="alternativeIdentifiers" onclick={handleSectionClick}>
+            Alternative Identifiers
+            <span>{toggleIcon}</span>
+        </div>
+        <template if:true={activeSection.alternativeIdentifiers}>
+            <div class="accordion-content">
+                <template for:each={product.alternativeIdentifiers} for:item="altId">
+                    <p key={altId}>• {altId}</p>
+                </template>
+            </div>
+        </template>
+    </div>
+</template> -->
+
+
+<template>
+    <div class="accordion">
+
+        <!-- Features -->
+        <div class={featuresClass}
+             data-section="features"
+             onclick={handleSectionClick}>
+            Features
+            <span class="icon">{featuresIcon}</span>
+        </div>
+        <template if:true={product.features.length}>
+            <template if:true={isFeaturesActive}>
+                <div class="accordion-content">
+                    <template for:each={product.features} for:item="feature">
+                        <p key={feature}>• {feature}</p>
+                    </template>
+                </div>
+            </template>
+        </template>
+
+        <!-- Applications -->
+        <div class={applicationsClass}
+             data-section="applications"
+             onclick={handleSectionClick}>
+            Applications
+            <span class="icon">{applicationsIcon}</span>
+        </div>
+        <template if:true={product.applications.length}>
+            <template if:true={isApplicationsActive}>
+                <div class="accordion-content">
+                    <template for:each={product.applications} for:item="application">
+                        <p key={application}>• {application}</p>
+                    </template>
+                </div>
+            </template>
+        </template>
+
+        <!-- Specifications -->
+        <div class={specificationsClass}
+             data-section="specifications"
+             onclick={handleSectionClick}>
+            Specifications
+            <span class="icon">{specificationsIcon}</span>
+        </div>
+        <template if:true={product.specifications.length}>
+            <template if:true={isSpecificationsActive}>
+                <div class="accordion-content">
+                    <template for:each={product.specifications} for:item="spec">
+                        <p key={spec}>• {spec}</p>
+                    </template>
+                </div>
+            </template>
+        </template>
+
+        <!-- Alternative Identifiers -->
+        <div class={alternativeIdentifiersClass}
+             data-section="alternativeIdentifiers"
+             onclick={handleSectionClick}>
+            Alternative Identifiers
+            <span class="icon">{alternativeIdentifiersIcon}</span>
+        </div>
+        <template if:true={product.alternativeIdentifiers.length}>
+            <template if:true={isAlternativeIdentifiersActive}>
+                <div class="accordion-content">
+                    <template for:each={product.alternativeIdentifiers} for:item="altId">
+                        <p key={altId}>• {altId}</p>
+                    </template>
+                </div>
+            </template>
+        </template>
+
+    </div>
+</template>

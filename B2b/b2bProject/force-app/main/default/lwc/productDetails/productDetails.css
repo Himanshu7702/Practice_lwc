@@ -1,0 +1,41 @@
+.accordion {
+    width: 100%;
+    border: 1px solid #bbb; /* Slightly darker border */
+    background-color: #effaf1; /* Light pastel green background */
+    font-family: Arial, sans-serif;
+}
+
+/* Each header row */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #bbb;
+    background-color: #effaf1; /* Same as container, but can be changed if you want more contrast */
+    color: #333;
+}
+
+.accordion-header:hover {
+    background-color: #dff2e3; /* Slightly darker green on hover */
+}
+
+/* The icon for plus/minus on the far right */
+.icon {
+    font-size: 18px;
+    margin-left: auto;
+}
+
+/* Active (open) section background in a bright pastel highlight */
+.accordion-header.active {
+    background-color: #b5e6c3; /* A brighter pastel green for open section */
+}
+
+/* The content area for each section */
+.accordion-content {
+    padding: 12px;
+    background-color: #fff;
+    border-bottom: 1px solid #bbb;
+}
